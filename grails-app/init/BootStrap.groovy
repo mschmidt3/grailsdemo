@@ -1,4 +1,5 @@
 import eu.gr8conf.grailsdemo.*
+import grailsdemo.sec.*
 
 class BootStrap {
 
@@ -21,6 +22,15 @@ class BootStrap {
         ].each {
             new Talk(title: it[0], presenter: it[1], startsAt: it[2]).save(failOnError: true)
         }
+        
+	def user1 = new User(username:"admin", password:"admin" ).save()
+	def user2 = new User(username:"user", password:"user" ).save()
+	def role1 = new Role(authority:"ROLE_ADMIN" ).save()
+	def role2 = new Role(authority:"ROLE_USER" ).save()
+	new UserRole( user1, role1 ).save()
+	new UserRole( user2, role2 ).save()
+
+
     }
 
     def destroy = {

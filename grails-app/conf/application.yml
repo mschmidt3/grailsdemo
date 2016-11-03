@@ -20,7 +20,6 @@ endpoints:
     enabled: false
     jmx:
         enabled: true
-
 ---
 grails:
     mime:
