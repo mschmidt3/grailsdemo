@@ -7,12 +7,13 @@ class AuthInterceptor {
     }
 
     boolean before() { 
+        println "AuthInterceptor.before"
         true
     }
 
 
     boolean after() { 
-        println "AuthInterceptor.after"
+        // println "AuthInterceptor.after"
         true 
     }
 
