@@ -5,6 +5,7 @@ class Talk {
     String title
     String presenter
     Date startsAt
+    String shortdescription
 
     Date dateCreated
     Date lastUpdated
@@ -15,6 +16,7 @@ class Talk {
     static constraints = {
         title blank: false
         presenter blank: false
+        shortdescription  nullable:true
     }
 
     @Override
